@@ -1,6 +1,3 @@
-# ros-noetic-action-ur10
-ROS Action experiment with UR10 robotic manipulator
-
 ## ROS (noetic) Action Experiment with UR10
 
 This project provides a ready-to-use ROS Noetic environment using Docker, with UR10 robot simulation in Gazebo and integration with Python-based control scripts.
@@ -10,11 +7,12 @@ You’ll be able to:
 * Experiment with action methods like blocking and non-blocking where goals are sent and tracked/not tracked to achieve certain tasks with more organized approach which is more realistic during implementation phase of various applications.
 * Control the UR10 end-effector through waypoints via Python script.
 
-### Prerequisites
+## Prerequisites
 
 * Docker installed on your system. [Support link](https://docs.docker.com/engine/install/ubuntu/)
 
-### Setup Instructions
+## Setup Instructions
+The following docker has been reused from the [linked]([https://docs.docker.com/engine/install/ubuntu/](https://github.com/vinayakaraju46/ROS-for-Apple-Silicon/tree/ros-noetic)) source and more info. can be found there.
 
 1. Clone the Repository
 ```bash
@@ -30,7 +28,7 @@ Once running, access via:
 * noVNC (GUI Desktop): http://localhost:4001
 * Web Terminal: http://localhost:4000
 
-### ROS Setup Inside Container
+## ROS Setup Inside Container
 
 3. Install Dependencies
 ```bash
@@ -69,7 +67,7 @@ echo "source ~/ros_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-### Running UR10 Simulation
+## Running UR10 Simulation
 Launch the UR10 simulation in Gazebo:
 ```bash
 roslaunch ur_launch ur10_sim_gazebo.launch rqt:=false
@@ -82,7 +80,7 @@ sudo apt install ros-noetic-ur-description ros-noetic-ur-gazebo \
 ```
 Close RViz with Ctrl+C in its terminal if it was working fine.
 
-### Python Virtual Environment Setup
+## Python Virtual Environment Setup
 ```bash
 # 9. Install Tools
 sudo apt install python-is-python3 python3.8-venv pip
@@ -98,7 +96,7 @@ pip install ansitable==0.11.1
 pip install jupyterlab==4.3.8 notebook==6.5.6
 ```
 
-### Run UR10 Control Script
+## Run UR10 Control Script
 ```bash
 #Navigate to project location:
 cd ~/Downloads/ros_noetic_action_ur10/
@@ -110,10 +108,9 @@ The UR10 end-effector (EE) will move to the target configuration through interme
 * Blocking mode: send goal & wait
 * Non-blocking mode: send goal (fire and forget method)
 
+### Future Work
+* Using the same platform to experiment different basic ROS concepts
+* To develop easy to use platform for beginner, next build will use ROS2 humble.
 
-🛠️ Future Work
-* Add MoveIt! integration for advanced motion planning
-* Implement real-time control with external hardware
-
-📜 License
-This project is open-source under the MIT License. Most of the supporting files and required custom packages were prepared by Chair of Control Theory and Systems Engineering at TU Dortmund, Germany. This work was a part of laboratory work of lecture named "Modelling and Control of Robotic Manipulator."
+### License and Acknowledgement
+This project is open-source under the MIT License. Most of the supporting files and required custom packages were prepared by Chair of Control Theory and Systems Engineering at TU Dortmund, Germany. This work was a part of laboratory work of lecture named "Modelling and Control of Robotic Manipulator." Further the docker used in this project was modified version of the [linked](https://github.com/vinayakaraju46/ROS-for-Apple-Silicon/tree/ros-noetic) source and credits to the contributor.
