@@ -108,7 +108,8 @@ The UR10 end-effector (EE) will move to the target configuration through interme
 * Blocking mode: send goal & wait
 * Non-blocking mode: send goal (fire and forget method)
 ![Blocking-mode](readme_files/Image1.png)
-![Blocking-mode](readme_files/Image2.png)
+![Nonblocking-mode](readme_files/Image2.png)
+![Demo-running](readme_files/Demo1.mp4)
 ### Future Work
 * Using the same platform to experiment different basic ROS concepts
 * To develop easy to use platform for beginner, next build will use ROS2 humble.
