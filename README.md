@@ -112,7 +112,7 @@ The UR10 end-effector (EE) will move to the target configuration through interme
 
 ![Nonblocking-mode](readme_files/Image2.png)
 
-![[Demo-running](readme_files/Image2.png)](https://youtu.be/RGy8cJAYWKk)
+![[Demo-running](readme_files/Demo1.mov)
 
 ### Future Work
 * Using the same platform to experiment different basic ROS concepts
