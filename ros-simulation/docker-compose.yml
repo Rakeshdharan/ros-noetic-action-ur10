@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  ros-simulation:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ros-simulation-${ENV}
+    networks:
+      ros-simulation:
+        ipv4_address: ${BASE_NET_RANGE}.4
+    environment:
+      - ENV
+    ports:
+      - "${TTYD_PORT}:5000"
+      - "${NO_VNC_PORT}:6080"
+      - "${VS_CODE_PORT}:8080"
+      - "${ROS_MASTER_URI_PORT}:11311"
+    stdin_open: true
+    tty: true
+    volumes:
+      # Config directory (already in your compose)
+      - ./config:/config
+
+      # Shared ROS workspace (always synced)
+      - ./ros_ws:/home/rosuser/ros_ws
+      # Optional: persist VNC config (keeps same password & settings)
+      - ./vnc:/home/rosuser/.vnc
+
+networks:
+  ros-simulation:
+    name: ros-simulation-${ENV}
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: ${BASE_NET_RANGE}.0/24
