@@ -78,6 +78,7 @@ sudo apt update
 sudo apt install ros-noetic-ur-description ros-noetic-ur-gazebo \
   ros-noetic-ur-robot-driver ros-noetic-xacro ros-noetic-ur*
 ```
+![roslaunch](readme_files/roslaunch.png)
 Close RViz with Ctrl+C in its terminal if it was working fine.
 
 ## Python Virtual Environment Setup
@@ -103,11 +104,11 @@ cd ~/Downloads/ros_noetic_action_ur10/
 chmod +x *
 python ros_noetic_action_ur10.py
 ```
-
 The UR10 end-effector (EE) will move to the target configuration through intermediate waypoints using:
 * Blocking mode: send goal & wait
 * Non-blocking mode: send goal (fire and forget method)
-
+![Blocking-mode](readme_files/Image1.png)
+![Blocking-mode](readme_files/Image2.png)
 ### Future Work
 * Using the same platform to experiment different basic ROS concepts
 * To develop easy to use platform for beginner, next build will use ROS2 humble.
