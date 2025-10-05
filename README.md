@@ -90,10 +90,15 @@ python -m venv ur10_env
 source ur10_env/bin/activate
 # 11. Install Python Dependencies
 pip install ipykernel ipympl pybullet rospkg
-# 12. Install Robotics Toolbox (find in the repo)
+```
+## 12. Install Robotics Toolbox which can be found in this [link](https://drive.google.com/file/d/1g3KaJ5saA_782735lW0KOvtDH41Phruu/view?usp=share_link)
+```bash
 cd ~/Downloads/robotics-toolbox-python-master
 pip install ansitable==0.11.1
-# 13. Install Jupyter Notebook (it worked for me, suitable version have to be found)
+```
+
+## 13. Install Jupyter Notebook (it worked for me, suitable version have to be found)
+```bash
 pip install jupyterlab==4.3.8 notebook==6.5.6
 ```
 
@@ -112,7 +117,7 @@ The UR10 end-effector (EE) will move to the target configuration through interme
 
 ![Nonblocking-mode](readme_files/Image2.png)
 
-![[Demo-running](readme_files/Demo1.mov)
+![[Demo-running](readme_files/Demo1.gif)
 
 ### Future Work
 * Using the same platform to experiment different basic ROS concepts
